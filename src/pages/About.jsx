@@ -15,15 +15,14 @@ const About = () => {
         Hello, I'm{" "}
         <span className='blue-gradient_text font-semibold drop-shadow'>
           {" "}
-          Adrian
+          Roger
         </span>{" "}
         👋
       </h1>
 
       <div className='mt-5 flex flex-col gap-3 text-slate-500'>
         <p>
-          Software Engineer based in Croatia, specializing in technical
-          education through hands-on learning and building applications.
+        Electromechanical Engineer and Full Stack Developer. Experienced Web Developer with a focus on Angular/React and Node.js. Specialized in building applications for the Internet of Things (IoT).
         </p>
       </div>
 
@@ -50,8 +49,7 @@ const About = () => {
         <h3 className='subhead-text'>Work Experience.</h3>
         <div className='mt-5 flex flex-col gap-3 text-slate-500'>
           <p>
-            I've worked with all sorts of companies, leveling up my skills and
-            teaming up with smart people. Here's the rundown:
+            I've teamed up with various companies, learning and growing alongside smart colleagues. Here's a quick summary:
           </p>
         </div>
 

@@ -1,13 +1,13 @@
 import { Canvas } from "@react-three/fiber";
 import { Suspense, useEffect, useRef, useState } from "react";
 
-import sakura from "../assets/sakura.mp3";
+import doIt from "../assets/doIt.mp3";
 import { HomeInfo, Loader } from "../components";
 import { soundoff, soundon } from "../assets/icons";
-import { Bird, Island, Plane, Sky } from "../models";
+import { Bird, Island, Plane, Sky, RobotArm } from "../models";
 
 const Home = () => {
-  const audioRef = useRef(new Audio(sakura));
+  const audioRef = useRef(new Audio(doIt));
   audioRef.current.volume = 0.4;
   audioRef.current.loop = true;
 
@@ -54,12 +54,27 @@ const Home = () => {
     return [screenScale, screenPosition];
   };
 
+  const adjustRobotArmForScreenSize = () => {
+    let screenScale, screenPosition;
+
+    if (window.innerWidth < 768) {
+      screenScale = [0.015, 0.015, 0.015];
+      screenPosition = [0, 0, 0];
+    } else {
+      screenScale = [0.03, 0.03, 0.03];
+      screenPosition = [0, 0, 0];
+    }
+
+    return [screenScale, screenPosition];
+  };
+
   const [biplaneScale, biplanePosition] = adjustBiplaneForScreenSize();
   const [islandScale, islandPosition] = adjustIslandForScreenSize();
+  const [robotArmScale, robotArmPosition] = adjustRobotArmForScreenSize();
 
   return (
-    <section className='w-full h-screen relative'>
-      <div className='absolute top-28 left-0 right-0 z-10 flex items-center justify-center'>
+    <section className="w-full h-screen relative">
+      <div className="absolute bottom-10 left-0 right-0 z-10 flex items-center justify-center">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
@@ -80,36 +95,43 @@ const Home = () => {
             intensity={2}
           />
           <hemisphereLight
-            skyColor='#b1e1ff'
-            groundColor='#000000'
+            skyColor="#b1e1ff"
+            groundColor="#000000"
             intensity={1}
           />
 
-          <Bird />
+          {/* <Bird /> */}
           <Sky isRotating={isRotating} />
-          <Island
+          {/* <Island
             isRotating={isRotating}
             setIsRotating={setIsRotating}
             setCurrentStage={setCurrentStage}
             position={islandPosition}
             rotation={[0.1, 4.7077, 0]}
             scale={islandScale}
+          /> */}
+          <RobotArm
+            isRotating={isRotating}
+            setIsRotating={setIsRotating}
+            position={robotArmPosition}
+            scale={robotArmScale}
+            setCurrentStage={setCurrentStage}
           />
-          <Plane
+          {/* <Plane
             isRotating={isRotating}
             position={biplanePosition}
             rotation={[0, 20.1, 0]}
             scale={biplaneScale}
-          />
+          /> */}
         </Suspense>
       </Canvas>
 
-      <div className='absolute bottom-2 left-2'>
+      <div className="absolute bottom-2 left-2">
         <img
           src={!isPlayingMusic ? soundoff : soundon}
-          alt='jukebox'
+          alt="jukebox"
           onClick={() => setIsPlayingMusic(!isPlayingMusic)}
-          className='w-10 h-10 cursor-pointer object-contain'
+          className="w-10 h-10 cursor-pointer object-contain"
         />
       </div>
     </section>

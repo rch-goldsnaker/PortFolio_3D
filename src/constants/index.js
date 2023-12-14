@@ -23,7 +23,8 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    angular
 } from "../assets/icons";
 
 export const skills = [
@@ -63,9 +64,9 @@ export const skills = [
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
-        type: "Animation",
+        imageUrl: angular,
+        name: "Angular",
+        type: "Frontend",
     },
     {
         imageUrl: mui,
@@ -87,16 +88,16 @@ export const skills = [
         name: "React",
         type: "Frontend",
     },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
+    // {
+    //     imageUrl: redux,
+    //     name: "Redux",
+    //     type: "State Management",
+    // },
+    // {
+    //     imageUrl: sass,
+    //     name: "Sass",
+    //     type: "Frontend",
+    // },
     {
         imageUrl: tailwindcss,
         name: "Tailwind CSS",
@@ -111,55 +112,57 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
+        title: "Full Stack Developer, Technology - Development & AI",
+        company_name: "EPIC iO Technologies ",
+        icon: estate,
         iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        date: "feb. 2023 - jun. 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Creation IoT solutions, using Thingsboard.",
+            "Creating customn widgets using Angular.",
+            "Creating iot services API using Node js.",
+            "Development of DeepInsights platform.",
+            "Smart Spaces,Site Security,License Plate Recognition,Biosecurity.",
+            "Building Solutions with Artificial Intelligence and IoT.",
+            "Communication, real-time data, and sensor telemetry.",
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
+        title: "Flow Specialist",
+        company_name: "Avature",
+        icon: estate,
         iconBg: "#fbc3bc",
-        date: "Jan 2021 - Feb 2022",
+        date: "ago. 2021 - feb. 2023",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Working as Flow Specialist in templates Team, in order to create and modified websites using Html, JavaScript, Css and Twig.",
+            "Keep a fluent communication with customer facing teams, to work on exactly what a customer needs.",
+            "Get together with other teammates to develop websites, for different sized projects.",
+            "Produce and maintain cross browser, cross platform, and high quality code.",
         ],
     },
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
+        title: "IoT Developer",
+        company_name: "Freelancer",
+        icon: estate,
         iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
+        date: "ene. 2021 - dic. 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Specialize in creating user-friendly and visually appealing dashboards for IoT applications. ",
+            "Deploying and managing MQTT brokers, establishing a reliable infrastructure for efficient communication among IoT devices. ",
+            "RESTful design principles, ensuring interoperability and scalability.",
         ],
     },
     {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Project Engineer",
+        company_name: "Flowserve Corporation",
+        icon: estate,
+        iconBg: "#accbe1",
+        date: "dic. 2017 - ago. 2021",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Strong knowledge of automation and control systems (PLC, HMI, SCADA,others)",
+            "Experience within the Industrial Control Systems.",
+            "Strong knowledge of OT communication protocols (modbus, ethernet, fieldbus, controlnet, profibus, profinet OPCHDA, OPC DA, OPC UA).",
+            "Creation of technical documentation: General Arrangement, P&ID, Instruments List, API Auxiliary."
         ],
     },
 ];
@@ -173,12 +176,12 @@ export const socialLinks = [
     {
         name: 'GitHub',
         iconUrl: github,
-        link: 'https://github.com/YourGitHubUsername',
+        link: 'https://github.com/rch-goldsnaker',
     },
     {
         name: 'LinkedIn',
         iconUrl: linkedin,
-        link: 'https://www.linkedin.com/in/YourLinkedInUsername',
+        link: 'https://www.linkedin.com/in/roger-chung-445170b9',
     }
 ];
 
@@ -186,43 +189,43 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'IoT Dashboard',
+        description: 'This is a very interesting project, where it starts from the programming of the Esp8266 and Esp32Cam devices together with the DHT11 temperature and humidity sensor, going through the frontend with Nuxt, then to the Backend with NodeJs, using a database with MongoDB, and finally an MQTT broker using EMQX. In the link you can see the static version on github pages.',
+        link: 'https://rch-goldsnaker.github.io/iot-demo.github.io/dashboard',
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
-        link: 'https://github.com/adrianhajdin/threads',
+        name: 'Air Quality Monitor Iot',
+        description: 'This application is a dashboard that shows the values obtained from various air sensors.It also helps the user to quickly identify the status of air quality.Within the app, the two air quality scales, such as PM2.5 and AQI, are displayed in the main part.then the temperature and pressure values are displayed.It also shows a table with the values obtained from the sensor.',
+        link: 'https://rch-goldsnaker.github.io/Air_Quality_Monitor_Iot_App',
     },
     {
         iconUrl: car,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Online Banking App',
+        description: 'This is a Full Stack application and was developed using React on the frontend, Node.js on the backend, and MongoDB as the database.This banking application provides a robust platform for users to perform transactions, view their accounts, and make transfers conveniently.With its home screen, dashboard, transaction visualization, and online banking capabilities, along with its responsive design, this application is a comprehensive solution for users banking needs.',
+        link: 'https://online-banking-app-frontend.vercel.app',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'Machine Learning',
+        description: "Using TensorFlow.js - On this web you can see a machine learning application that can recognize random images.For the generation of random images we will use an external source such as 'picsum', and for image recognition we are going to use 'mobilenet'.",
+        link: 'https://rch-goldsnaker.github.io/TensorFlowJS_Mobilenet_002',
     },
     {
         iconUrl: estate,
         theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
+        name: 'IoT Monitoring',
+        description: 'Using Html, Javascript and CSS - It is a web site where a dashboard of temperature motor sensors are shown. This Front-end template can be integrated with a IoT Project for the temperature motor control and monitoring.This could help with the maintenance of the equipment and prevent future failures.',
+        link: 'https://rch-goldsnaker.github.io/rch.goldsnaker',
     },
     {
         iconUrl: summiz,
         theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
+        name: 'Blog - IoT Projects',
+        description: 'Using React, NextJs, GraphQL and Tailwind CSS - The Blog is called IoT Projects and it is a blog where I publish articles related to device configuration and programming, as well as IoT projects related to industrial automation and sensor monitoring.',
+        link: 'https://r005-blog-next-js-graph-ql-tailwind-e64z3dvhj-rch-goldsnaker.vercel.app',
     }
 ];
